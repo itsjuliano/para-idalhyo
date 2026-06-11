@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juliano & Idálhyo — 12 de Junho</title>
+  
+  <link rel="preconnect" href="https:&#47;&#47;fonts.googleapis.com">
+  <link rel="preconnect" href="https:&#47;&#47;fonts.gstatic.com" crossorigin>
+  <!-- Fonte Google Fonts: Cormorant Garamond & Caveat (para a assinatura) -->
+  <link href="https:&#47;&#47;fonts.googleapis.com&#47;css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=DM+Sans:wght@300;400;500&amp;family=Caveat:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https:&#47;&#47;cdnjs.cloudflare.com&#47;ajax&#47;libs&#47;font-awesome&#47;6.5.0&#47;css&#47;all.min.css">
+  
+  <!-- Vinculação do CSS Externo -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── TELA DE BOAS-VINDAS CINEMATOGRÁFICA ── -->
+  <div id="intro-overlay">
+    <div class="intro-card">
+      <button class="intro-heart-btn" onclick="startExperience()" title="Entrar na nossa história">
+        <i class="fa-solid fa-heart"></i>
+      </button>
+      <h2 class="intro-title">Juliano & Idálhyo</h2>
+      <p class="intro-subtitle">Ligue o som e entre no nosso universo</p>
+    </div>
+  </div>
+
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+  <canvas id="petalfield"></canvas>
+
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">J & I</a>
+    <ul class="nav-links">
+      <li><a href="#timeline">Momentos</a></li>
+      <li><a href="#letter">Carta</a></li>
+      <li><a href="#gallery">Galeria</a></li>
+      <li><a href="#surprise">Surpresa</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-blob blob-1"></div>
+    <div class="hero-blob blob-2"></div>
+    <div class="hero-blob blob-3"></div>
+    <p class="hero-eyebrow reveal">12 de Junho de 2026 · Dia dos Namorados</p>
+    <h1 class="hero-title reveal reveal-delay-1">
+      Juliano <span class="amp">&amp;</span> Idálhyo
+    </h1>
+    <div class="hero-line reveal reveal-delay-2"></div>
+    <p class="hero-subtitle reveal reveal-delay-3">
+      Nem todo começo tem data exata —<br>
+      o nosso tem. E vale cada detalhe.
+    </p>
+    <p class="hero-date reveal reveal-delay-4">Juntos desde 30 de agosto de 2025</p>
+    <div class="hero-scroll">
+      <i class="fa-solid fa-chevron-down"></i>
+      <span>Rolar</span>
+    </div>
+  </section>
+
+  <!-- ── TIMELINE ── -->
+  <section id="timeline">
+    <div class="section-inner">
+      <p class="section-label reveal">Momentos</p>
+      <h2 class="section-title reveal reveal-delay-1">Nossa <em>história</em>,<br>capítulo por capítulo</h2>
+      <div class="divider reveal reveal-delay-2"></div>
+      <div class="timeline-list">
+
+        <div class="timeline-item reveal reveal-delay-1">
+          <span class="t-date">Jul.<br>2025</span>
+          <div class="t-line"><div class="t-dot"></div><div class="t-connector"></div></div>
+          <div class="t-content">
+            <p class="t-title">O início</p>
+            <p class="t-desc">Aquele momento em que algo muda sem aviso — uma conversa, um olhar, e de repente o mundo tem uma nova coordenada.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-2">
+          <span class="t-date">Jul.<br>2025</span>
+          <div class="t-line"><div class="t-dot"></div><div class="t-connector"></div></div>
+          <div class="t-content">
+            <p class="t-title">Primeiro encontro</p>
+            <p class="t-desc">A primeira vez que o tempo passou rápido demais. Quando a despedida chegou cedo demais.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-3">
+          <span class="t-date">Dez.<br>2025</span>
+          <div class="t-line"><div class="t-dot"></div><div class="t-connector"></div></div>
+          <div class="t-content">
+            <p class="t-title">Viagem juntos</p>
+            <p class="t-desc">Descobrir novos lugares ao lado de quem faz qualquer lugar parecer especial.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-4">
+          <span class="t-date">Jun.<br>2026</span>
+          <div class="t-line"><div class="t-dot"></div><div class="t-connector"></div></div>
+          <div class="t-content">
+            <p class="t-title">Primeiro Dia dos Namorados</p>
+            <p class="t-desc">Não é só uma data no calendário. É a prova de que boas histórias continuam sendo escritas.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LETTER ── -->
+  <section id="letter">
+    <div class="section-inner">
+      <p class="section-label reveal">Para você</p>
+      <h2 class="section-title reveal reveal-delay-1">Uma carta<br><em>curta demais</em></h2>
+      <div class="divider reveal reveal-delay-2"></div>
+      <blockquote class="letter-body reveal reveal-delay-3">
+        Idálhyo,<br>
+        Não vou te dizer que você completa meu mundo porque,<br>
+        eu nem gosto da ideia de precisar de alguém para me sentir inteiro,<br>
+        mas com você, acontece algo raro: eu não preciso fingir quem eu sou.<br><br>
+        Você é a resposta que eu não sabia que precisava.<br>
+        E o melhor: você não tenta me consertar, nem me transformar.<br><br>
+        A gente se escolhe todo dia, mesmo sem flores exageradas ou juras ensaiadas.<br>
+        E nesse primeiro 12 de junho juntos, eu só quero registrar o óbvio:<br><br>
+        Você faz sentido. E com você, eu também faço.<br><br>
+        Te amo do jeito que a gente é: sem roteiro mas com vontade.
+      </blockquote>
+      <p class="letter-signature reveal reveal-delay-4">
+        Com amor,<br>
+        <span class="signature-name">Juliano Moraes</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ── GALLERY ── -->
+  <section id="gallery">
+    <div class="section-inner">
+      <p class="section-label reveal">Memórias</p>
+      <h2 class="section-title reveal reveal-delay-1">Os <em>momentos</em><br>que ficaram</h2>
+      <div class="divider reveal reveal-delay-2"></div>
+      
+      <div class="gallery-grid reveal reveal-delay-3">
+        <!-- Foto 1 -->
+        <div class="photo-card">
+          <img src="assets/momento1.jpeg" alt="Momento 1" onerror="handleImageError(this, 'Foto especial')">
+          <div class="photo-overlay"><span class="photo-label">Pedro II, PI</span></div>
+        </div>
+        
+        <!-- Foto 2 -->
+        <div class="photo-card">
+          <img src="assets/momento2.jpeg" alt="Momento 2" onerror="handleImageError(this, 'Nossa foto')">
+          <div class="photo-overlay"><span class="photo-label">Alcântara, MA</span></div>
+        </div>
+        
+        <!-- Foto 3 -->
+        <div class="photo-card">
+          <img src="assets/momento3.jpeg" alt="Momento 3" onerror="handleImageError(this, 'Lembrança')">
+          <div class="photo-overlay"><span class="photo-label">Teresina, PI</span></div>
+        </div>
+        
+        <!-- Foto 4 -->
+        <div class="photo-card">
+          <img src="assets/momento4.jpeg" alt="Momento 4" onerror="handleImageError(this, 'Favorita')">
+          <div class="photo-overlay"><span class="photo-label">São José de Ribamar, MA</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── COUNTDOWN ── -->
+  <section id="countdown">
+    <div class="section-inner" style="text-align:center;">
+      <p class="section-label reveal">Contagem regressiva</p>
+      <h2 class="section-title reveal reveal-delay-1">Até o próximo<br><em>12 de junho</em></h2>
+      <div class="divider reveal reveal-delay-2" style="margin:0 auto 0;"></div>
+      <div class="countdown-grid reveal reveal-delay-3">
+        <div class="count-block"><span class="count-number" id="cd-days">—</span><span class="count-label">Dias</span></div>
+        <div class="count-block"><span class="count-number" id="cd-hours">—</span><span class="count-label">Horas</span></div>
+        <div class="count-block"><span class="count-number" id="cd-mins">—</span><span class="count-label">Minutos</span></div>
+        <div class="count-block"><span class="count-number" id="cd-secs">—</span><span class="count-label">Segundos</span></div>
+      </div>
+      <p class="countdown-note reveal reveal-delay-4">Próximo Dia dos Namorados: <span>12 de Junho de 2027</span></p>
+    </div>
+  </section>
+
+  <!-- ── SURPRISE ── -->
+  <section id="surprise">
+    <div class="section-inner">
+      <p class="section-label reveal">Para Idálhyo</p>
+      <h2 class="section-title reveal reveal-delay-1">Uma última<br><em>coisa…</em></h2>
+      <div class="divider reveal reveal-delay-2" style="margin:0 auto 2.4rem;"></div>
+      <button class="surprise-btn reveal reveal-delay-3" id="surprise-btn" onclick="revealSurprise()">
+        <span>Abrir a surpresa</span>
+      </button>
+      <div class="surprise-reveal" id="surprise-reveal">
+        <p class="surprise-phrase" id="surprise-phrase">
+          "Que cada dia ao seu lado<br>
+          seja razão suficiente<br>
+          para chamar este tempo de especial."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-names">Juliano <span class="amp">&amp;</span> Idálhyo</div>
+    <p class="footer-meta">12 de Junho de 2025 · Primeiro Dia dos Namorados</p>
+    <div class="footer-petals">✿ ✾ ✿</div>
+  </footer>
+
+  <button id="audio-toggle" onclick="toggleAudio()" title="Música ambiente">
+    <div class="equalizer" id="equalizer">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </button>
+
+  <audio id="bg-audio" loop>
+    <source src="https:&#47;&#47;cdn.pixabay.com&#47;audio&#47;2022&#47;05&#47;27&#47;audio_1808fbf07a.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Vinculação do JavaScript Externo -->
+  <script src="script.js"></script>
+</body>
+</html>
